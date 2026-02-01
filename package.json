@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "demo:gmail": "tsx src/cli.ts",
+    "demo:feishu": "tsx src/feishu/demo.ts",
     "state:show": "tsx src/state/show.ts",
     "state:reset": "tsx src/state/reset.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.25",
+    "@larksuiteoapi/node-sdk": "^1.58.0",
     "dotenv": "^17.2.3",
     "googleapis": "^171.0.0",
     "zod": "^4.3.6"
