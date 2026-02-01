@@ -1,6 +1,12 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
-import "dotenv/config";
+import dotenv from "dotenv";
+
+// 优先加载用户级配置 ~/.config/huluwa-agent/.env，再用项目本地 .env 补充
+const configDir = path.join(os.homedir(), ".config", "huluwa-agent");
+dotenv.config({ path: path.join(configDir, ".env") });
+dotenv.config(); // 项目本地 .env 作为 fallback，不覆盖已有值
 
 import { getGmailClient } from "./gmail/client";
 import { listUnreadMetadata } from "./gmail/unread";

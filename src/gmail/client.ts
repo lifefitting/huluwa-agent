@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import readline from "node:readline";
 import { google } from "googleapis";
@@ -6,7 +7,7 @@ import { google } from "googleapis";
 const SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"];
 
 function secretsDir() {
-  return path.join(process.cwd(), ".secrets");
+  return path.join(os.homedir(), ".config", "huluwa-agent");
 }
 
 function credsPath() {
