@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "demo:gmail": "tsx src/cli.ts",
-    "demo:feishu": "tsx src/feishu/demo.ts",
-    "state:show": "tsx src/state/show.ts",
-    "state:reset": "tsx src/state/reset.ts"
+    "demo:gmail": "bun src/cli.ts",
+    "demo:feishu": "bun src/feishu/demo.ts",
+    "state:show": "bun src/state/show.ts",
+    "state:reset": "bun src/state/reset.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.25",
